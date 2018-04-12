@@ -35,7 +35,7 @@ def birb():
 
 def get_last_tweet_id():
     r = api.request('statuses/user_timeline', {'count': 1})
-    tweet_id = [False if 'ida' not in item else item['id'] for item in r]
+    tweet_id = [False if 'id' not in item else item['id'] for item in r]
     try:
         if tweet_id[0]:
             return tweet_id[0]
