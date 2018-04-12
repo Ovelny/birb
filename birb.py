@@ -49,7 +49,7 @@ def get_last_tweet_id():
 # optionally repost another tweet if supplied
 def delete_last_tweet():
     tweet_id = get_last_tweet_id()
-    r = api.request('statuses/destroy/:' + tweet_id)
+    r = api.request('statuses/destroy/:' + str(tweet_id))
     print(colors.FAIL + 'Last tweet deleted' + colors.ENDC
           if r.status_code == 200 
           else colors.FAIL + 'Error: ' + r.text + colors.ENDC)
