@@ -34,11 +34,28 @@ def birb():
         birb()
 
 def get_last_tweet_id():
-    pass
+    r = api.request('statuses/user_timeline', {'count': 1})
+    tweet_id = [False if 'ida' not in item else item['id'] for item in r]
+    try:
+        if tweet_id[0]:
+            return tweet_id[0]
+        else:
+            raise Exception(tweet_id)
+    except Exception:
+        print(colors.FAIL + 
+              'Stopping: tweet id not found. Status code returned: ' + 
+              str(r.status_code) + colors.ENDC)
 
+# optionally repost another tweet if supplied
 def delete_last_tweet():
-    pass
+    tweet_id = get_last_tweet_id()
+    r = api.request('statuses/destroy/:' + tweet_id)
+    print(colors.FAIL + 'Last tweet deleted' + colors.ENDC
+          if r.status_code == 200 
+          else colors.FAIL + 'Error: ' + r.text + colors.ENDC)
 
 # send a tweet with an image
 def image():
     pass
+
+get_last_tweet_id()
