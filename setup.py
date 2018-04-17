@@ -12,7 +12,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'birb'
 DESCRIPTION = 'Send tweets from your CLI'
-URL = 'https://github.com/ovelny/birb'
+URL = 'https://github.com/Ovelny/birb'
 EMAIL = 'this.is.ovelny@gmail.com'
 AUTHOR = 'Ovelny'
 REQUIRES_PYTHON = '>=3'
