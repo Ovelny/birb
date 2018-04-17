@@ -1,0 +1,2 @@
+include README.md birb.py setup.py
+recursive-include dir images

@@ -1,16 +1,7 @@
 from TwitterAPI import TwitterAPI
 import click
 
-#api_template = TwitterAPI("""consumer_key,
-#                 consumer_secret,
-#                 access_token_key,
-#                 access_token_secret""")
-# write API keys here
-api = TwitterAPI('bvAHLSzVzXa2Smxava28lV5zA',
-                 'UrHkYs0a32wnCrTcuAgkZsY8TY2Cw1NWF10br9Bwdb9kyD69QU',
-                 '950754776345710593-KN2uE5Zhc3d6NXAABr2CHNTEIbjrRHF',
-                 'kQIfj8q2DYUQvRNZGkXvBTVFj29c4f87bQCYidRq23ET7')
-
+api = None
 
 birb = click.Group()
 
