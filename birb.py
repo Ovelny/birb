@@ -6,7 +6,11 @@ import click
 
 api = None
 
-birb = click.Group()
+@click.group(invoke_without_command=True)
+@click.pass_context
+def birb(context):
+    if context.invoked_subcommand is None:
+        tweet()
 
 @birb.command('tweet', short_help='send a tweet')
 def tweet():

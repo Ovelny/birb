@@ -72,7 +72,7 @@ setup(
     url=URL,
     py_modules=['birb'],
      entry_points={
-         'console_scripts': ['birb=birb.birb:birb'],
+         'console_scripts': ['birb=birb:birb'],
      },
     install_requires=REQUIRED,
     include_package_data=True,

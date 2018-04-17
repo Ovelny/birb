@@ -32,7 +32,8 @@ If you want to repost right away, `birb oops --resend` will trigger the `tweet` 
 
 ## Compatibility
 
-birb has only been tested for Linux. It works with any version of Python3.
+birb has only been tested for Linux, and works with any version of Python3.
+The main modules that birb depends on are `click` and `TwitterAPI`, which are installed automatically.
 
 ## Installation
 
