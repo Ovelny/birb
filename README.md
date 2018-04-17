@@ -30,6 +30,10 @@ Be aware that this will delete your tweet regardless of where or when it has bee
 
 If you want to repost right away, `birb oops --resend` will trigger the `tweet` command after deletion.
 
+## Compatibility
+
+birb has only been tested for Linux. It works with any version of Python3.
+
 ## Installation
 
 Create an app on [apps.twitter.com](https://apps.twitter.com) with a name of your liking, and run `pip`:
