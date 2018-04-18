@@ -2,10 +2,35 @@
 # -*- coding: utf-8 -*-
 
 from TwitterAPI import TwitterAPI
+#from birb_secrets import api
 import click
-
+#import os
 api = None
+'''if api is None:
+    
+    here = os.path.abspath(os.path.dirname(__file__))
+    # Ask for twitter API keys
+    print("Create an app on https://apps.twitter.com and paste the following infos to use birb: ")
+    consumer_key = input("Paste consumer key here: ")
+    consumer_secret = input("Paste consumer secret here: ")
+    access_token_key = input("Paste access token here: ")
+    access_token_secret = input("Paste access token secret here: ")
 
+api = TwitterAPI('a','a','a','a')
+                                    + '\'' + consumer_secret + '\'' + ','
+                                    + '\'' + access_token_key + '\'' + ','
+                                    + '\'' + access_token_secret + '\'' + ')\n')
+
+    with open(os.path.join(here, 'birb_secrets.py'), 'r+', encoding='utf-8') as script:
+        content = script.readlines()
+        script.seek(0)
+        for line in content:
+api = TwitterAPI('a','a','a','a')
+                script.write(line)
+            else:
+                script.write(credentials)
+        script.truncate()
+'''
 @click.group(invoke_without_command=True)
 @click.pass_context
 def birb(context):

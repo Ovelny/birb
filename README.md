@@ -7,7 +7,7 @@ birb is a minimalist app that lets you tweet from your CLI. No timeline, no sear
 ## But why?
 
 Twitter is noisy, and even a quick post can end up being distracting with your timeline and mentions popping up.
-birb is limited on purpose so you don't fall into that waste of time: post now from your CLI, and mess with the rest later on.
+birb is limited on purpose so you don't fall into that timesink: post now from your CLI, and deal with the rest later on.
 
 ## Usage
 
@@ -32,8 +32,7 @@ If you want to repost right away, `birb oops --resend` will trigger the `tweet` 
 
 ## Compatibility
 
-birb has only been tested for Linux, and works with any version of Python3.
-The main modules that birb depends on are `click` and `TwitterAPI`, which are installed automatically.
+birb has only been tested with Linux, and works with any version of Python3.
 
 ## Installation
 
