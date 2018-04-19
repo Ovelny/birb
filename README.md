@@ -24,8 +24,8 @@ Commands:
   tweet  send a tweet
 ```
 
-Using the app without any command or parameter automatically triggers the `tweet` command.
-You can delete your most recent tweet with `birb oops` if needed.
+Using the app without any command or parameter automatically triggers the `tweet` command.\
+You can delete your most recent tweet with `birb oops` if needed.\
 Be aware that this will delete your tweet regardless of where or when it has been posted.
 
 If you want to repost right away, `birb oops --resend` will trigger the `tweet` command after deletion.
@@ -42,8 +42,8 @@ Create an app on [apps.twitter.com](https://apps.twitter.com) with a name of you
 pip install --user birb
 ```
 
-When launching `birb` for the first time, you will be prompted to copy/paste the consumer keys and access tokens of the app you just created.
-Those credentials will be locally stored and obfuscated in `birb_keys.py` and nowhere else.
+When launching `birb` for the first time, you will be prompted to copy/paste the consumer keys and access tokens of the app you just created.\
+Those credentials will be locally stored and obfuscated in `birb_keys.py` and nowhere else.\
 Be aware however that this is only obfuscation: do not store that file online or share its content.
 
 You're all set and ready to use birb!
