@@ -48,7 +48,7 @@ Be aware however that this is only obfuscation: do not store that file online or
 
 You're all set and ready to use birb!
 
-## Todo
+## Todo
 
 * tweet threads
 * tweet with media files
