@@ -6,8 +6,7 @@ birb is a minimalist app that lets you tweet from your CLI. No timeline, no sear
 
 ## But why?
 
-Twitter is noisy, and even a quick post can end up being distracting with your timeline and mentions popping up.
-
+Twitter is noisy, and even a quick post can end up being distracting with your timeline and mentions popping up.\
 birb is limited on purpose so you don't fall into that timesink: post now from your CLI, and deal with the rest later on.
 
 ## Usage
