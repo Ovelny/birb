@@ -18,10 +18,10 @@ def birb(context):
         or birb_keys.enc_key is None):
         init_birb()
     if context.invoked_subcommand is None:
-        tweet()
+        send_tweet()
 
 @birb.command('tweet', short_help='send a tweet')
-def tweet():
+def send_tweet():
     tweet_length = 280
     api = get_keys()
     tweet = input(colors.PROCESSING + 'Compose your tweet: ' + colors.ENDC)
@@ -35,7 +35,7 @@ def tweet():
               'Your tweet is ' + str(len(tweet) - tweet_length) +
                  ' character(s) too long, please try again' +
               colors.ENDC)
-        tweet()
+        send_tweet()
 
 @birb.command('oops', short_help='delete your most recent tweet')
 @click.option('--resend', is_flag=True, help='resend a tweet immediately')
@@ -48,7 +48,7 @@ def delete_last_tweet(context, resend):
           if r.status_code == 200 
           else colors.FAIL + 'Error: ' + r.text + colors.ENDC)
     if resend:
-        context.invoke(tweet)
+        context.invoke(send_tweet)
 
 # ------------
 #  Helpers and init

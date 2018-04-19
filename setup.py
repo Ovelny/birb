@@ -16,7 +16,7 @@ URL = 'https://github.com/Ovelny/birb'
 EMAIL = 'this.is.ovelny@gmail.com'
 AUTHOR = 'Ovelny'
 REQUIRES_PYTHON = '>=3'
-VERSION = '0.1.7'
+VERSION = '0.1.8'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -48,7 +48,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    py_modules=['birb'],
+    py_modules=['birb', 'birb_keys'],
     #cmdclass={'install' : birb_register},
      entry_points={
          'console_scripts': ['birb=birb:birb'],
