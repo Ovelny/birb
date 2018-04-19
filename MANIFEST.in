@@ -1,2 +1,1 @@
-include README.md birb.py setup.py LICENSE.txt
-recursive-include dir images
+include README.md birb.py birb_secrets.py setup.py LICENSE.txt

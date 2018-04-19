@@ -8,7 +8,6 @@ import birb
 from shutil import rmtree
 
 from setuptools import find_packages, setup, Command
-from setuptools.command.install import install
 
 # Package meta-data.
 NAME = 'birb'
@@ -17,11 +16,11 @@ URL = 'https://github.com/Ovelny/birb'
 EMAIL = 'this.is.ovelny@gmail.com'
 AUTHOR = 'Ovelny'
 REQUIRES_PYTHON = '>=3'
-VERSION = '0.1.5'
+VERSION = '0.1.7'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'twitterAPI', 'click'
+    'twitterAPI', 'click', 'cryptography'
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -39,32 +38,6 @@ if not VERSION:
 else:
     about['__version__'] = VERSION
 
-class birb_register(install):
-    def run(self):
-        here = os.path.abspath(os.path.dirname(__file__))
-        # Ask for twitter API keys
-        print("Create an app on https://apps.twitter.com and paste the following infos to use it: ")
-        consumer_key = input("Paste consumer key here: ")
-        consumer_secret = input("Paste consumer secret here: ")
-        access_token_key = input("Paste access token here: ")
-        access_token_secret = input("Paste access token secret here: ")
-
-        credentials = ('api = TwitterAPI(' + '\'' + consumer_key + '\'' + ','
-                                        + '\'' + consumer_secret + '\'' + ','
-                                        + '\'' + access_token_key + '\'' + ','
-                                        + '\'' + access_token_secret + '\'' + ')\n')
-
-        with open(os.path.join(here, 'birb.py'), 'r+', encoding='utf-8') as script:
-            content = script.readlines()
-            script.seek(0)
-            for line in content:
-                if "api =" not in line:
-                    script.write(line)
-                else:
-                    script.write(credentials)
-            script.truncate()
-        install.run(self)
-
 # Where the magic happens:
 setup(
     name=NAME,
@@ -76,7 +49,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     py_modules=['birb'],
-    cmdclass={'install' : birb_register},
+    #cmdclass={'install' : birb_register},
      entry_points={
          'console_scripts': ['birb=birb:birb'],
      },

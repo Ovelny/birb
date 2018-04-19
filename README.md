@@ -42,10 +42,11 @@ Create an app on [apps.twitter.com](https://apps.twitter.com) with a name of you
 pip install --user birb
 ```
 
-You will be prompted to copy/paste the consumer keys and access tokens of the app you just created.
-Those credentials will be locally stored at the top of `birb.py` and nowhere else, so you can interact with your application.
+When launching `birb` for the first time, you will be prompted to copy/paste the consumer keys and access tokens of the app you just created.
+Those credentials will be locally stored and obfuscated in `birb_keys.py` and nowhere else.
+Be aware however that this is only obfuscation: do not store that file online or share its content.
 
-You're all set. Enjoy!
+You're all set and ready to use birb!
 
 ## Todo
 
