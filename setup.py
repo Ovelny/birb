@@ -16,7 +16,7 @@ URL = 'https://github.com/Ovelny/birb'
 EMAIL = 'this.is.ovelny@gmail.com'
 AUTHOR = 'Ovelny'
 REQUIRES_PYTHON = '>=3'
-VERSION = '0.1.8'
+VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [

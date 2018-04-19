@@ -3,6 +3,7 @@
 
 from TwitterAPI import TwitterAPI
 from cryptography.fernet import Fernet
+import getpass
 import birb_keys
 import importlib
 import click
@@ -64,7 +65,7 @@ def init_birb():
     # Ask for twitter API keys
     print('Create an app on https://apps.twitter.com and paste the following infos to use it: ')
     for element in range(len(credentials)):
-        credentials[element] = encode_encrypt(f, input('Paste ' + credentials[element] + ' here: '))
+        credentials[element] = encode_encrypt(f, getpass.getpass('Paste ' + credentials[element] + ' here: '))
 
     with open(os.path.join(here, 'birb_keys.py'), 'r+', encoding='utf-8') as script:
             content = script.readlines()

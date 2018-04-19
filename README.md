@@ -11,7 +11,7 @@ birb is limited on purpose so you don't fall into that timesink: post now from y
 
 ## Usage
 
-(usage example with screencast)
+[![asciicast](https://asciinema.org/a/177047.png)](https://asciinema.org/a/177047)
 
 ```sh
 Usage: birb.py [OPTIONS] COMMAND [ARGS]...
